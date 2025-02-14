@@ -1,6 +1,6 @@
 # Tutorial Pemrograman Lanjut
-Madeline Clairine Gultom
-2306207846
+Madeline Clairine Gultom\
+2306207846\
 ADPRO-A
 
 ## Modul 1: Coding Standards
