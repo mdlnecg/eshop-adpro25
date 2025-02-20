@@ -3,7 +3,41 @@ Madeline Clairine Gultom\
 2306207846\
 ADPRO-A
 
-## Modul 1: Coding Standards
+## Modul 1: CI/CD & DevOps
+### Refleksi
+1. > List the code quality issue(s) that you fixed during the exercise and explain your strategy on fixing them.
+
+- **Menghapus Pengulangan Kode**
+  Pada `ProductRepositoryTest.java`, sebelumnya terdapat beberapa pengulangan kode dalam fungsi uji, terutama saat membuat suatu produk. Untuk mengatasi hal ini, saya menambahkan method `setProduct()`, yang dapat dipanggil kapan pun dibutuhkan. Dengan cara ini, kode menjadi lebih ringkas dan mudah dipelihara. Berikut implementasinya:
+```java
+    Product setProduct() {
+        product = new Product();
+        product.setProductId("eb558e9f-1c39-460e-8860-71af6af63bd6");
+        product.setProductName("Sampo Cap Bambang");
+        product.setProductQuantity(100);
+        productRepository.create(product);
+        return product;
+    }
+```
+- **Menghapus Modifier yang Tidak Diperlukan pada Interface**
+  Pada interface, semua method secara default bersifat `public`, sehingga penulisan modifier `public` tidak diperlukan. Oleh karena itu, saya menghapus modifier `public` pada setiap method di dalam interface `ProductService` untuk menjaga kode tetap bersih dan sesuai dengan konvensi. Berikut implementasinya:
+```java
+    public interface ProductService {
+        Product create(Product product);
+        List<Product>findAll();
+        Product edit(String productId, Product newProductData);
+        Product findById(String productId);
+        void delete(String productId);
+    }
+```
+- **Menjaga Konsistensi Penamaan Fungsi `Test` dengan Camel Case**
+  Sebelumnya, penamaan fungsi uji dalam kode menggunakan kombinasi `camelCase` dan `snake_case`, yang dapat mengurangi konsistensi dan keterbacaan kode. Untuk menjaga standar yang lebih rapi dan seragam, saya memastikan semua nama fungsi menggunakan `camelCase`.
+
+2. > Look at your CI/CD workflows (GitHub)/pipelines (GitLab). Do you think the current implementation has met the definition of Continuous Integration and Continuous Deployment? Explain the reasons (minimum 3 sentences)!
+
+Menurut saya, implementasi CI/CD saya ini sudah memenuhi definisi `Continuous Integration (CI)` dan `Continuous Deployment (CD)`. Dalam tahap CI, saya telah mengintegrasikan berbagai workflow seperti ci.yml, scorecard.yml, dan pmd.yml. Selain itu, saya menerapkan penggunaan `unit test` untuk memastikan bahwa setiap perubahan diuji sebelum diintegrasikan ke dalam branch utama. Dalam aspek `Continuous Deployment (CD)`, saya menggunakan `Koyeb` sebagai platform untuk otomatisasi deployment sehingga setiap perubahan yang berhasil melewati tahap `CI` dapat langsung diterapkan ke lingkungan produksi tanpa proses manual. Dengan workflow ini, proses pengembangan menjadi lebih cepat dan andal, serta mengurangi risiko `bug` di tahap produksi karena setiap perubahan diuji secara menyeluruh sebelum diterapkan.
+
+<details><summary> ## Modul 1: Coding Standards </summary>
 ### Refleksi 1
 > You already implemented two new features using Spring Boot. Check again your source code and evaluate the coding standards that you have learned in this module. Write clean code principles and secure coding practices that have been applied to your code.  If you find any mistake in your source code, please explain how to improve your code.
 
@@ -24,3 +58,4 @@ Untuk memastikan bahwa *unit test* yang dibuat sudah cukup dalam memverifikasi p
    What do you think about the cleanliness of the code of the new functional test suite? Will the new code reduce the code quality? Identify the potential clean code issues, explain the reasons, and suggest possible improvements to make the code cleaner!
 
 Kode dalam functional test suite baru harus tetap menjaga prinsip *clean code* agar mudah dibaca dan dipelihara. Jika banyak kode dari pengujian sebelumnya disalin tanpa modifikasi, hal ini dapat menyebabkan duplikasi yang tidak perlu dan menurunkan kualitas kode. Selain itu, kurangnya modularitas dan penamaan yang tidak deskriptif dapat membuat pengujian sulit dipahami.
+</details><br/>
