@@ -10,5 +10,4 @@ class EshopApplicationTests {
     void contextLoads() {
         EshopApplication.main(new String[]{});
     }
-
 }
