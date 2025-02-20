@@ -37,7 +37,9 @@ ADPRO-A
 
 Menurut saya, implementasi CI/CD saya ini sudah memenuhi definisi `Continuous Integration (CI)` dan `Continuous Deployment (CD)`. Dalam tahap CI, saya telah mengintegrasikan berbagai workflow seperti ci.yml, scorecard.yml, dan pmd.yml. Selain itu, saya menerapkan penggunaan `unit test` untuk memastikan bahwa setiap perubahan diuji sebelum diintegrasikan ke dalam branch utama. Dalam aspek `Continuous Deployment (CD)`, saya menggunakan `Koyeb` sebagai platform untuk otomatisasi deployment sehingga setiap perubahan yang berhasil melewati tahap `CI` dapat langsung diterapkan ke lingkungan produksi tanpa proses manual. Dengan workflow ini, proses pengembangan menjadi lebih cepat dan andal, serta mengurangi risiko `bug` di tahap produksi karena setiap perubahan diuji secara menyeluruh sebelum diterapkan.
 
-<details><summary> ## Modul 1: Coding Standards </summary>
+
+<details><summary>Modul 1: Coding Standards</summary>
+
 ### Refleksi 1
 > You already implemented two new features using Spring Boot. Check again your source code and evaluate the coding standards that you have learned in this module. Write clean code principles and secure coding practices that have been applied to your code.  If you find any mistake in your source code, please explain how to improve your code.
 
@@ -58,4 +60,4 @@ Untuk memastikan bahwa *unit test* yang dibuat sudah cukup dalam memverifikasi p
    What do you think about the cleanliness of the code of the new functional test suite? Will the new code reduce the code quality? Identify the potential clean code issues, explain the reasons, and suggest possible improvements to make the code cleaner!
 
 Kode dalam functional test suite baru harus tetap menjaga prinsip *clean code* agar mudah dibaca dan dipelihara. Jika banyak kode dari pengujian sebelumnya disalin tanpa modifikasi, hal ini dapat menyebabkan duplikasi yang tidak perlu dan menurunkan kualitas kode. Selain itu, kurangnya modularitas dan penamaan yang tidak deskriptif dapat membuat pengujian sulit dipahami.
-</details><br/>
+</details>
