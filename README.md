@@ -4,7 +4,7 @@ Madeline Clairine Gultom\
 ADPRO-A
 ### [ADVShop](https://advprog-tutorial2-mdlnecg.koyeb.app/)
 
-## Modul 1: CI/CD & DevOps
+## Modul 2: CI/CD & DevOps
 ### Refleksi
 1. > List the code quality issue(s) that you fixed during the exercise and explain your strategy on fixing them.
 
