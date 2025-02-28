@@ -4,7 +4,26 @@ Madeline Clairine Gultom\
 ADPRO-A
 ### [ADVShop](https://advprog-tutorial2-mdlnecg.koyeb.app/)
 
-## Modul 2: CI/CD & DevOps
+## Modul 3: Maintainability & OO Principles
+### Refleksi
+1. > Explain what principles you apply to your project!
+   
+- **SRP (Single-responsibility Principle)**
+  Sebelum menerapkan prinsip SOLID pada branch `before-solid`, `CarController` masih tergabung dengan `ProductController`, meskipun keduanya memiliki tanggung jawab yang berbeda. Oleh karena itu, `CarController` dipisahkan ke dalam file terpisah, yaitu `CarController.java`, untuk menangani fungsi terkait Car secara khusus. Selain itu, terdapat file `HomePageController.java` yang bertanggung jawab atas `HomePage`, serta `ProductController.java` yang mengelola `Product`.
+- **ISP (Interface Segregation Principle)**
+  Prinsip ini diterapkan dengan memisahkan `CarService` dan `ProductService`, sehingga masing-masing service hanya menangani satu aspek secara spesifik tanpa mencampurkan fungsionalitas yang tidak relevan.
+- **DIP (Dependency Inversion Principle)**
+  Prinsip ini menegaskan bahwa suatu entitas harus bergantung pada abstraksi, bukan implementasi konkret. Sebelum menerapkan SOLID, `CarController` secara langsung bergantung pada `CarServiceImpl`, padahal seharusnya menggunakan `CarService` sebagai abstraksi. Oleh karena itu, saya mengubah dari yang tadinya `CarServiceImpl` menjadi interface `CarService`.
+
+2. > Explain the advantages of applying SOLID principles to your project with examples.
+
+Menerapkan prinsip SOLID dalam proyek dapat membuat kode lebih terstruktur, mudah dipahami, dan fleksibel terhadap perubahan. Dengan pemisahan tanggung jawab yang jelas, setiap komponen hanya menangani satu tugas sehingga proses pemeliharaan dan pengembangan lebih efisien. Selain itu, sistem lebih mudah diperluas tanpa harus mengubah kode yang sudah ada, di mana hal ini dapat mengurangi risiko bug. Penggunaan abstraksi juga membantu mengurangi ketergantungan langsung pada implementasi tertentu, membuat kode lebih modular dan mudah diuji. Secara keseluruhan, prinsip SOLID membantu menciptakan arsitektur yang lebih stabil, scalable, dan mudah dikelola dalam jangka panjang.
+
+3. > Explain the disadvantages of not applying SOLID principles to your project with examples.
+
+Kekurangan jika tidak menggunakan prinsip SOLID tentunnya berkebalikkan dengan refleksi pada nomor 2. Tanpa menerapkan prinsip SOLID, kode dalam proyek menjadi sulit dipelihara, diperluas, dan dipahami. Misalnya, jika suatu kelas menangani terlalu banyak tanggung jawab, perubahan kecil dapat berdampak luas dan memiliki risiko terjadinya bug. Jika kode terlalu bergantung pada implementasi spesifik, perubahan kecil dapat memengaruhi banyak bagian lain dan membuat pengembangan lebih rumit. Kurangnya modularitas juga menyulitkan pengujian karena sulit memisahkan bagian kode tertentu. Akibatnya, proyek menjadi kurang fleksibel, lebih rentan terhadap kesalahan, dan sulit untuk dikembangkan dalam jangka panjang.
+
+<details><summary>Modul 2: CI/CD & DevOps</summary>
 ### Refleksi
 1. > List the code quality issue(s) that you fixed during the exercise and explain your strategy on fixing them.
 
@@ -37,7 +56,7 @@ ADPRO-A
 2. > Look at your CI/CD workflows (GitHub)/pipelines (GitLab). Do you think the current implementation has met the definition of Continuous Integration and Continuous Deployment? Explain the reasons (minimum 3 sentences)!
 
 Menurut saya, implementasi CI/CD saya ini sudah memenuhi definisi `Continuous Integration (CI)` dan `Continuous Deployment (CD)`. Dalam tahap CI, saya telah mengintegrasikan berbagai workflow seperti ci.yml, scorecard.yml, dan pmd.yml. Selain itu, saya menerapkan penggunaan `unit test` untuk memastikan bahwa setiap perubahan diuji sebelum diintegrasikan ke dalam branch utama. Dalam aspek `Continuous Deployment (CD)`, saya menggunakan `Koyeb` sebagai platform untuk otomatisasi deployment sehingga setiap perubahan yang berhasil melewati tahap `CI` dapat langsung diterapkan ke lingkungan produksi tanpa proses manual. Dengan workflow ini, proses pengembangan menjadi lebih cepat dan andal, serta mengurangi risiko `bug` di tahap produksi karena setiap perubahan diuji secara menyeluruh sebelum diterapkan.
-
+</details>
 
 <details><summary>Modul 1: Coding Standards</summary>
 
