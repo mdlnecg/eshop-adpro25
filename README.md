@@ -4,7 +4,17 @@ Madeline Clairine Gultom\
 ADPRO-A
 ### [ADVShop](https://advprog-tutorial2-mdlnecg.koyeb.app/)
 
-## Modul 3: Maintainability & OO Principles
+## Modul 4: Refactoring and TDD
+### Refleksi
+1. > Reflect based on Percival (2017) proposed self-reflective questions (in “Principles and Best Practice of Testing” submodule, chapter “Evaluating Your Testing Objectives”), whether this TDD flow is useful enough for you or not. If not, explain things that you need to do next time you make more tests.
+
+Menerapkan TDD Flow pada awalnya cukup menantang karena mengharuskan kita merancang tests yang relevan dengan project yang sedang dikembangkan. Namun, seiring berjalannya proses, pendekatan ini sangat bermanfaat karena berfungsi sebagai acuan dalam mengevaluasi apakah kode yang ditulis sudah memenuhi ekspektasi. Dalam konteks Refactoring, TDD juga membantu memastikan bahwa perubahan pada kode tetap mempertahankan fungsionalitas yang diinginkan tanpa mengorbankan stabilitas sistem. Dengan demikian, TDD tidak hanya meningkatkan kualitas pengujian tetapi juga mempermudah pemeliharaan kode di masa mendatang.
+
+2. > You have created unit tests in Tutorial. Now reflect whether your tests have successfully followed F.I.R.S.T. principle or not. If not, explain things that you need to do the next time you create more tests.
+
+Unit tests yang telah berjalan dengan cukup cepat dan konsisten. Namun, masih ada beberapa aspek yang perlu diperbarui agar lebih sesuai dengan prinsip F.I.R.S.T. Saya perlu lebih teliti dalam memastikan bahwa setiap pengujian benar-benar bersifat independen dan memiliki cakupan yang lebih baik, terutama dalam hal isolasi dan kejelasan hasil pengujian.
+
+<details><summary>Modul 3: Maintainability & OO Principles</summary>
 ### Refleksi
 1. > Explain what principles you apply to your project!
    
@@ -22,6 +32,7 @@ Menerapkan prinsip SOLID dalam proyek dapat membuat kode lebih terstruktur, muda
 3. > Explain the disadvantages of not applying SOLID principles to your project with examples.
 
 Kekurangan jika tidak menggunakan prinsip SOLID tentunnya berkebalikkan dengan refleksi pada nomor 2. Tanpa menerapkan prinsip SOLID, kode dalam proyek menjadi sulit dipelihara, diperluas, dan dipahami. Misalnya, jika suatu kelas menangani terlalu banyak tanggung jawab, perubahan kecil dapat berdampak luas dan memiliki risiko terjadinya bug. Jika kode terlalu bergantung pada implementasi spesifik, perubahan kecil dapat memengaruhi banyak bagian lain dan membuat pengembangan lebih rumit. Kurangnya modularitas juga menyulitkan pengujian karena sulit memisahkan bagian kode tertentu. Akibatnya, proyek menjadi kurang fleksibel, lebih rentan terhadap kesalahan, dan sulit untuk dikembangkan dalam jangka panjang.
+</details>
 
 <details><summary>Modul 2: CI/CD & DevOps</summary>
 ### Refleksi
